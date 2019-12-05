@@ -52,7 +52,7 @@ end
 def reduce_to_all_true(source_array)
   counter_index = 0
   while counter_index < source_array.length do
-    if source_array
+    if source_array[counter_index]
       counter_index += 1
     else
       return false
@@ -62,5 +62,13 @@ def reduce_to_all_true(source_array)
 end
 
 def reduce_to_any_true(source_array)
-
+  counter_index = 0
+  while counter_index < source_array.length do
+    if source_array[counter_index]
+      return true
+    else
+      counter_index += 1
+    end
+  end
+  return false
 end
